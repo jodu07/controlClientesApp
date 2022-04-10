@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  isLoggedIn!: boolean;   //esta logueado?
+  loggedInUser!: string | null;     //cual es el usuario que esta lgueado?
+  permitirRegistro!: boolean | undefined;
 
-  ngOnInit(): void {
+  constructor(
+   // private loginService: LoginService,
+    private router: Router,
+  //  private configuracionServicio: ConfiguracionServicio
+    
+  ) { }
+
+  ngOnInit() {
+   
   }
 
-}
+  
+  logout(){
+    
+    this.isLoggedIn = false;
+    this.router.navigate(['/login']);
+  }
+
+   }
