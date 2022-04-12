@@ -11,6 +11,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FlashMessagesModule } from 'flash-messages-angular';
 import { ClientPageComponent } from './client/pages/client-page/client-page.component';
+import { FormsModule } from '@angular/forms';
+import { SerComponent } from './client/pages/ser/ser.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -18,14 +22,17 @@ import { ClientPageComponent } from './client/pages/client-page/client-page.comp
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    ClientPageComponent
+    ClientPageComponent,
+    SerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firestore, 'control-clientes'),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    FlashMessagesModule
+    FlashMessagesModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
