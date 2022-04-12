@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FirestoreModule, FirestoreSettings } from '@angular/fire/firestore';
-import { AuthModule } from '@angular/fire/auth';
-
-
-
+import {  FirestoreSettings } from '@angular/fire/firestore';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,19 +10,21 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FlashMessagesModule } from 'flash-messages-angular';
+import { ClientPageComponent } from './client/pages/client-page/client-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ClientPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FirestoreModule,
-    AuthModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     FlashMessagesModule
   ],
   providers: [],
