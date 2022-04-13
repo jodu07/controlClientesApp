@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { EditClientComponent } from './client/pages/edit-client/edit-client.component';
+import { FormClientComponent } from './client/components/form-client/form-client.component';
+import { TableClientComponent } from './client/components/table-client/table-client.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { EditClientComponent } from './client/pages/edit-client/edit-client.comp
     FooterComponent,
     ClientPageComponent,
     EditClientComponent,
+    FormClientComponent,
+    TableClientComponent,
 
   ],
   imports: [

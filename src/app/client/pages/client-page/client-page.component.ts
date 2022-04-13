@@ -39,7 +39,7 @@ export class ClientPageComponent implements OnInit {
       })
     }
 
-    agregar(formulario:NgForm){
+    agregar(formulario:any){
       console.log(formulario.value);
       if(!formulario.valid){
         this.flashMessages.show('por favor llena el formulario correctamente', {
