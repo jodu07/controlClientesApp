@@ -26,6 +26,40 @@ export class ClientService {
     this.clientsColeccion.add(cliente);
   }
 
+  //metodo para llamar cliente desde la bd y editarlo..... recuperar el documento con el id
+  // doc para llamar un solo objeto
+
+  getClient(id: string): Observable<Client>{
+    this.clientDoc = this.db.doc<Client>(`clientes/${id}`);
+    return this.client = this.clientDoc.snapshotChanges().pipe(
+        map( accion => {
+            if(accion.payload.exists === false){
+                return null;
+            }
+            else{
+                const DATOS = accion.payload.data() as Client;
+                DATOS.id = accion.payload.id;
+                return DATOS as any;
+            }
+        })
+    );
+    return this.client;
+    }
+
+  updateClient(cliente: Client){
+      this.clientDoc = this.db.doc(`clientes/${cliente.id}`);
+      this.clientDoc.update(cliente);
+  }
+
+  deleteClient(cliente: Client){
+    this.clientDoc = this.db.doc(`clientes/${cliente.id}`);
+    this.clientDoc.delete();
+}
+
+    
+
+  
+
 
 
 

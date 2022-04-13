@@ -38,24 +38,29 @@ export class ClientPageComponent implements OnInit {
         console.log(this.clients);
       })
     }
- 
 
-  agregar(formulario:NgForm){
-    console.log(formulario.value);
-    if(!formulario.valid){
-      this.flashMessages.show('por favor llena el formulario correctamente', {
-        cssClass: 'alert-danger', timeout: 4000
-      });
+    agregar(formulario:NgForm){
+      console.log(formulario.value);
+      if(!formulario.valid){
+        this.flashMessages.show('por favor llena el formulario correctamente', {
+          cssClass: 'alert-danger', timeout: 4000
+        });
+      }
+      else{
+        //Agregar el nuevo cliente
+        this._clientService.addClient(formulario.value);
+        this.clientForm.resetForm();
+        this.cerrarModal();
+  
+      }
+  
     }
-    else{
-      //Agregar el nuevo cliente
-      this._clientService.addClient(formulario.value);
-      this.clientForm.resetForm();
-      this.cerrarModal();
 
-    }
+    private cerrarModal(){
+      this.botonCerrar.nativeElement.click();
+     }
 
-  }
+  
 
   getSaldoTotal(){
     let saldoTotal: number = 0;
@@ -67,9 +72,7 @@ export class ClientPageComponent implements OnInit {
     return saldoTotal;
   }
 
-  private cerrarModal(){
-   this.botonCerrar.nativeElement.click();
-  }
+  
 
   ngOnInit(): void {
     this.listClients();      

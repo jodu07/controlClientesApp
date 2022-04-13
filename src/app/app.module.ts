@@ -14,6 +14,7 @@ import { ClientPageComponent } from './client/pages/client-page/client-page.comp
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
+import { EditClientComponent } from './client/pages/edit-client/edit-client.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { environment } from '../environments/environment';
     NavbarComponent,
     FooterComponent,
     ClientPageComponent,
+    EditClientComponent,
 
   ],
   imports: [
