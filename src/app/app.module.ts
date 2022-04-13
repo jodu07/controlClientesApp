@@ -12,10 +12,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { FlashMessagesModule } from 'flash-messages-angular';
 import { ClientPageComponent } from './client/pages/client-page/client-page.component';
 import { FormsModule } from '@angular/forms';
-import { SerComponent } from './client/pages/ser/ser.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
-
 
 @NgModule({
   declarations: [
@@ -23,7 +21,7 @@ import { environment } from '../environments/environment';
     NavbarComponent,
     FooterComponent,
     ClientPageComponent,
-    SerComponent
+
   ],
   imports: [
     BrowserModule,

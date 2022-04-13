@@ -1,6 +1,4 @@
 
-
-
 <!-- Botones -->
 
 <section id="actions" class="py-4 mb-4 bg-light">
@@ -75,7 +73,7 @@
     </div>
 </section>
 
-<!--agregar cliente modal
+<!--agregar cliente modal-->
 
 <div class="modal fade" id="agregarClienteModal">
     <div class="modal-dialog modal-lg">
@@ -89,7 +87,7 @@
             <flash-messages></flash-messages>
  
             
-            <form #clienteForm="ngForm" (ngSubmit)="agregar(clienteForm)">
+            <form #clienteForm="ngForm" (ngSubmit)="agregar(clientForm)">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
@@ -102,10 +100,10 @@
                          [ngClass]="{'is-invalid': nombre.errors && nombre.touched}"
                          required
                          minlength="2">
-                         <div [hidden]="!nombre.errors?.required" class="invalid-feedback">
+                         <div [hidden]="!nombre.errors?.['required']" class="invalid-feedback">
                              Nombre requerido
                          </div>
-                         <div [hidden]="!nombre.errors?.minlength" class="invalid-feedback">
+                         <div [hidden]="!nombre.errors?.['minlength']" class="invalid-feedback">
                             Debe contener al menos 2 caracteres
                           </div>                           
                     </div>
@@ -123,10 +121,10 @@
                          [ngClass]="{'is-invalid': apellido.errors && apellido.touched}"
                          required
                          minlength="2">
-                         <div [hidden]="!apellido.errors?.required" class="invalid-feedback">
+                         <div [hidden]="!apellido.errors?.['required']" class="invalid-feedback">
                              Apellido requerido
                          </div>
-                         <div [hidden]="!apellido.errors?.minlength" class="invalid-feedback">
+                         <div [hidden]="!apellido.errors?.['minlength']" class="invalid-feedback">
                             Debe contener al menos 2 caracteres
                           </div>                        
                     </div>
@@ -144,10 +142,10 @@
                          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
                          required
                          >
-                         <div [hidden]="!email.errors?.required" class="invalid-feedback">
+                         <div [hidden]="!email.errors?.['required']" class="invalid-feedback">
                              Email requerido
                          </div>
-                         <div [hidden]="!email.errors?.pattern" class="invalid-feedback">
+                         <div [hidden]="!email.errors?.['pattern']" class="invalid-feedback">
                             Email no es valido
                           </div>  
                     </div>
@@ -165,7 +163,7 @@
                          [ngClass]="{'is-invalid': saldo.errors && saldo.touched}"
                          required
                          >
-                         <div [hidden]="!saldo.errors?.required" class="invalid-feedback">
+                         <div [hidden]="!saldo.errors?.['required']" class="invalid-feedback">
                              Saldo requerido
                          </div>
                          
@@ -181,4 +179,3 @@
     </div>
 </div>
 
--->
