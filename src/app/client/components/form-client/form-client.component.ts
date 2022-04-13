@@ -9,6 +9,8 @@ import { Client } from '../../interface/client.interface';
 })
 export class FormClientComponent implements OnInit {
 
+  @ViewChild("clienteForm") clientForm!: NgForm;
+
   @Output() onEnter   : EventEmitter<Form> = new EventEmitter();
 
   client: Client ={

@@ -1,90 +1,89 @@
-
-
 <form #clienteForm="ngForm" (ngSubmit)="enviarTerminosAAgregar(clienteForm)">
-    <div class="modal-body">
-        <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input
-             type="text" 
-             name="nombre" 
-             class="form-control" 
-             #nombre="ngModel" 
-             [(ngModel)]="client.nombre" 
-             [ngClass]="{'is-invalid': nombre.errors && nombre.touched}"
-             required
-             minlength="2">
-             <div [hidden]="!nombre.errors?.['required']" class="invalid-feedback">
-                 Nombre requerido
-             </div>
-             <div [hidden]="!nombre.errors?.['minlength']" class="invalid-feedback">
-                Debe contener al menos 2 caracteres
-              </div>                           
-        </div>
-    </div>                
-    
-    <div class="modal-body">
-        <div class="form-group">
-            <label for="apellido">Apellido</label>
-            <input 
-            type="text" 
-            name="apellido" 
-            class="form-control" 
-            #apellido="ngModel" 
-             [(ngModel)]="client.apellido" 
-             [ngClass]="{'is-invalid': apellido.errors && apellido.touched}"
-             required
-             minlength="2">
-             <div [hidden]="!apellido.errors?.['required']" class="invalid-feedback">
-                 Apellido requerido
-             </div>
-             <div [hidden]="!apellido.errors?.['minlength']" class="invalid-feedback">
-                Debe contener al menos 2 caracteres
-              </div>                        
-        </div>
-    </div> 
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        name="nombre"
+        class="form-control"
+        #nombre="ngModel"
+        [(ngModel)]="client.nombre"
+        [ngClass]="{ 'is-invalid': nombre.errors && nombre.touched }"
+        required
+        minlength="2"
+      />
+      <div [hidden]="!nombre.errors?.['required']" class="invalid-feedback">
+        Nombre requerido
+      </div>
+      <div [hidden]="!nombre.errors?.['minlength']" class="invalid-feedback">
+        Debe contener al menos 2 caracteres
+      </div>
+    </div>
+  </div>
 
-    <div class="modal-body">
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input 
-            type="email" 
-            name="email" class="form-control"
-            #email="ngModel" 
-             [(ngModel)]="client.email" 
-             [ngClass]="{'is-invalid': email.errors && email.touched}"
-             pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-             required
-             >
-             <div [hidden]="!email.errors?.['required']" class="invalid-feedback">
-                 Email requerido
-             </div>
-             <div [hidden]="!email.errors?.['pattern']" class="invalid-feedback">
-                Email no es valido
-              </div>  
-        </div>
-    </div> 
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input
+        type="text"
+        name="apellido"
+        class="form-control"
+        #apellido="ngModel"
+        [(ngModel)]="client.apellido"
+        [ngClass]="{ 'is-invalid': apellido.errors && apellido.touched }"
+        required
+        minlength="2"
+      />
+      <div [hidden]="!apellido.errors?.['required']" class="invalid-feedback">
+        Apellido requerido
+      </div>
+      <div [hidden]="!apellido.errors?.['minlength']" class="invalid-feedback">
+        Debe contener al menos 2 caracteres
+      </div>
+    </div>
+  </div>
 
-    <div class="modal-body">
-        <div class="form-group">
-            <label for="saldo">Saldo</label>
-            <input 
-            type="number" 
-            name="saldo" 
-            class="form-control"
-            #saldo="ngModel" 
-             [(ngModel)]="client.saldo" 
-             [ngClass]="{'is-invalid': saldo.errors && saldo.touched}"
-             required
-             >
-             <div [hidden]="!saldo.errors?.['required']" class="invalid-feedback">
-                 Saldo requerido
-             </div>
-             
-        </div>
-    </div>   
-    
-    <div class="modal-footer">                    
-            <button type="submit" class="btn btn-primary">Guardar</button>              
-    </div> 
-    
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        class="form-control"
+        #email="ngModel"
+        [(ngModel)]="client.email"
+        [ngClass]="{ 'is-invalid': email.errors && email.touched }"
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+        required
+      />
+      <div [hidden]="!email.errors?.['required']" class="invalid-feedback">
+        Email requerido
+      </div>
+      <div [hidden]="!email.errors?.['pattern']" class="invalid-feedback">
+        Email no es valido
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="saldo">Saldo</label>
+      <input
+        type="number"
+        name="saldo"
+        class="form-control"
+        #saldo="ngModel"
+        [(ngModel)]="client.saldo"
+        [ngClass]="{ 'is-invalid': saldo.errors && saldo.touched }"
+        required
+      />
+      <div [hidden]="!saldo.errors?.['required']" class="invalid-feedback">
+        Saldo requerido
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
 </form>

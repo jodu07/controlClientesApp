@@ -18,7 +18,7 @@ export class ClientPageComponent implements OnInit {
     saldo: 0
   }
 
-  @ViewChild("clienteForm") clientForm!: NgForm;
+ // @ViewChild("clienteForm") clientForm!: NgForm;
 
   @ViewChild("botonCerrar") botonCerrar!: ElementRef;
 
@@ -49,7 +49,7 @@ export class ClientPageComponent implements OnInit {
       else{
         //Agregar el nuevo cliente
         this._clientService.addClient(formulario.value);
-        this.clientForm.resetForm();
+        formulario.resetForm();
         this.cerrarModal();
   
       }
@@ -58,9 +58,7 @@ export class ClientPageComponent implements OnInit {
 
     private cerrarModal(){
       this.botonCerrar.nativeElement.click();
-     }
-
-  
+     }  
 
   getSaldoTotal(){
     let saldoTotal: number = 0;
