@@ -17,6 +17,7 @@ import { environment } from '../environments/environment';
 import { EditClientComponent } from './client/pages/edit-client/edit-client.component';
 import { FormClientComponent } from './client/components/form-client/form-client.component';
 import { TableClientComponent } from './client/components/table-client/table-client.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TableClientComponent } from './client/components/table-client/table-cli
     EditClientComponent,
     FormClientComponent,
     TableClientComponent,
+    DashboardComponent,
 
   ],
   imports: [

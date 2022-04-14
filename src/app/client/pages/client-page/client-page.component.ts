@@ -49,9 +49,12 @@ export class ClientPageComponent implements OnInit {
       else{
         //Agregar el nuevo cliente
         this._clientService.addClient(formulario.value);
-        formulario.resetForm();
         this.cerrarModal();
-  
+        formulario.resetForm();
+
+        this.flashMessages.show('cliente agreado correctamente', {
+          cssClass: 'alert-danger', timeout: 4000
+        }); 
       }
   
     }
