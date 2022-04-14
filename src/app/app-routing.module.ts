@@ -5,15 +5,16 @@ import { ClientPageComponent } from './client/pages/client-page/client-page.comp
 import { EditClientComponent } from './client/pages/edit-client/edit-client.component';
 import { PruebComponent } from './client/pages/prueb/prueb.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
+import { LoginComponent } from './signIn/login/login.component';
 
 const routes: Routes = [
 
   {path: 'clientPage', component: ClientPageComponent},
   {path: 'editClient/:id', component: EditClientComponent},
   {path: 'formClient', component: FormClientComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'prueba', component: PruebComponent},
-  {path:'' , component: DashboardComponent, pathMatch:'full'},  
- 
+  {path:'' , component: DashboardComponent, pathMatch:'full'}  
 
 
 ];

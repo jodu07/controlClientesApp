@@ -13,6 +13,7 @@ import { environment } from '../environments/environment';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
+import { SignInModule } from './signIn/sign-in.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SharedModule } from './shared/shared.module';
     AngularFireAuthModule,
  // FlashMessagesModule.forRoot(),
     DashboardModule,
-    SharedModule
+    SharedModule,
+    SignInModule
  
   ],
   providers: [],

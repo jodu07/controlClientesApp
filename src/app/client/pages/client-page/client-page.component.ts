@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { FlashMessagesService } from 'flash-messages-angular';
 import { Client } from '../../interface/client.interface';
 import { ClientService } from '../../services/client.service';
@@ -72,9 +71,7 @@ export class ClientPageComponent implements OnInit {
     }
     return saldoTotal;
   }
-
   
-
   ngOnInit(): void {
     this.listClients();      
    } 

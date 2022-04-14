@@ -1,5 +1,5 @@
 <!-- Botones -->
-<flash-messages></flash-messages>
+
 
 <section id="actions" class="py-4 mb-4 bg-light">
   <div class="container">
@@ -31,6 +31,7 @@
          <app-table-client [listClients]="clients"></app-table-client>
         </div>
       </div>
+
       <!--Tarjetas laterales-->
       <div class="col-md-3">
         <div class="card text-center bg-danger text-white mb-3">
@@ -51,6 +52,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -70,6 +72,7 @@
           #botonCerrar
         ></button>
       </div>
+      <flash-messages></flash-messages>
   
       <app-form-client (onEnter)="agregar($event)"></app-form-client>
     </div>

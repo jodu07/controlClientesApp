@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Form, NgForm } from '@angular/forms';
 import { Client } from '../../interface/client.interface';
 
@@ -9,9 +9,11 @@ import { Client } from '../../interface/client.interface';
 })
 export class FormClientComponent implements OnInit {
 
-  @ViewChild("clienteForm") clientForm!: NgForm;
 
-  @Output() onEnter   : EventEmitter<Form> = new EventEmitter();
+  //viewChild para recibir los valores del formulario
+ // @ViewChild("clienteForm") clientForm!: NgForm;
+ 
+  @Output() onEnter  : EventEmitter<Form> = new EventEmitter();
 
   client: Client ={
     nombre: '',
@@ -21,7 +23,9 @@ export class FormClientComponent implements OnInit {
   }
   constructor() { }
 
-  enviarTerminosAAgregar(formulario: NgForm){    
+  enviarFormularioAAgregar(formulario: NgForm){   
+// aca los estamos recibiendo el formulario con los valores 
+//para emitirlo al componente padre (clientPage) y ejecutar el metodo para agregarlo 
     this.onEnter.emit(formulario);
    }
 
