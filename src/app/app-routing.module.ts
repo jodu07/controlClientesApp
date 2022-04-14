@@ -4,6 +4,7 @@ import { FormClientComponent } from './client/components/form-client/form-client
 import { ClientPageComponent } from './client/pages/client-page/client-page.component';
 import { EditClientComponent } from './client/pages/edit-client/edit-client.component';
 import { PruebComponent } from './client/pages/prueb/prueb.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 
 const routes: Routes = [
 
@@ -11,7 +12,7 @@ const routes: Routes = [
   {path: 'editClient/:id', component: EditClientComponent},
   {path: 'formClient', component: FormClientComponent},
   {path: 'prueba', component: PruebComponent},
-  
+  {path:'' , component: DashboardComponent, pathMatch:'full'},  
  
 
 
