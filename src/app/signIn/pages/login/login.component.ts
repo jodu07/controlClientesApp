@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'flash-messages-angular';
-import { SignInService } from '../services/sign-in.service';
+import { SignInService } from '../../services/sign-in.service';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
               ngOnInit() {
               this._signInService.getAuth().subscribe(auth => {
                   if(auth){
-               //     this.router.navigate(['/']);
+                    this.router.navigate(['/']);
                   }
                 })
               }

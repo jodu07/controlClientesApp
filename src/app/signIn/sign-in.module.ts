@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
 import { FlashMessagesModule } from 'flash-messages-angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { RegisterComponent } from './register/register.component';
-import { SettingComponent } from './setting/setting.component';
 
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { SettingComponent } from './pages/setting/setting.component';
 
 
 @NgModule({
   declarations: [
-    LoginComponent,
+    LoginComponent, 
+    SettingComponent,
     RegisterComponent,
     SettingComponent
   ],
