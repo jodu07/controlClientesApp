@@ -5,13 +5,15 @@ import { FlashMessagesModule } from 'flash-messages-angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
+import { SettingComponent } from './setting/setting.component';
 
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SettingComponent
   ],
   imports: [
     CommonModule,

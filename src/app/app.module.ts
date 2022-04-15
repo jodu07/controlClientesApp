@@ -3,9 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
-import {  FirestoreSettings } from '@angular/fire/firestore';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireAuthModule, SETTINGS } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
 
 import { FlashMessagesModule } from 'flash-messages-angular';
@@ -14,10 +13,12 @@ import { environment } from '../environments/environment';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { SignInModule } from './signIn/sign-in.module';
+import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NoEncontradoComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,9 @@ import { SignInModule } from './signIn/sign-in.module';
     SignInModule
  
   ],
-  providers: [],
+  providers: [
+    { provide: SETTINGS, useValue:{}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
