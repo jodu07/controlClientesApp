@@ -6,6 +6,7 @@ import { EditClientComponent } from './client/pages/edit-client/edit-client.comp
 import { PruebComponent } from './client/pages/prueb/prueb.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { LoginComponent } from './signIn/login/login.component';
+import { RegisterComponent } from './signIn/register/register.component';
 
 const routes: Routes = [
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'editClient/:id', component: EditClientComponent},
   {path: 'formClient', component: FormClientComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'prueba', component: PruebComponent},
   {path:'' , component: DashboardComponent, pathMatch:'full'}  
 
