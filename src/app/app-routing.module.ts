@@ -18,7 +18,7 @@ const routes: Routes = [
   
   {path: 'editClient/:id', component: EditClientComponent, canActivate: [AuthGuard]},  
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent, canActivate:[SettingGuard]},
+  {path: 'register', component: RegisterComponent},
   {path: 'setting', component: SettingComponent, canActivate: [AuthGuard]},
   {path:'' , component: DashboardComponent, canActivate: [AuthGuard]},
   {path: '**', component: NoEncontradoComponent} 

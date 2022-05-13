@@ -8,7 +8,7 @@ import { AngularFireAuthModule, SETTINGS } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
 
 import { FlashMessagesModule } from 'flash-messages-angular';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
@@ -26,7 +26,7 @@ import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
     AngularFireModule.initializeApp(environment.firestore, 'control-clientes'),
     AngularFirestoreModule,
     AngularFireAuthModule,
- // FlashMessagesModule.forRoot(),
+  FlashMessagesModule.forRoot(),
     DashboardModule,
     SharedModule,
     SignInModule

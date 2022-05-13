@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
               ngOnInit() {
               this._signInService.getAuth().subscribe(auth => {
                   if(auth){
-                    this.router.navigate(['/']);
+               //     this.router.navigate(['/']);
                   }
                 })
               }
