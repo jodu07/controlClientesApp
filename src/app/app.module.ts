@@ -8,7 +8,7 @@ import { AngularFireAuthModule, SETTINGS } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
 
 import { FlashMessagesModule } from 'flash-messages-angular';
-import { environment } from '../environments/environment.prod';
+import { environment } from '../environments/environment';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
