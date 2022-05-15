@@ -16,13 +16,16 @@ export class NavbarComponent implements OnInit {
 
   constructor(
    private _signInService: SignInService,
-   private router: Router,
-   private _settingService: SettingService
-    
+   private _settingService: SettingService,
+   private router: Router   
   ) { }
 
-  ngOnInit() {
+  logout(){    
+    this.isLoggedIn = false;
+    this.router.navigate(['/login']);
+  }
 
+  ngOnInit() {
     this._signInService.getAuth().subscribe( auth =>{
       if(auth){
         this.isLoggedIn = true;
@@ -32,19 +35,9 @@ export class NavbarComponent implements OnInit {
       else{
         this.isLoggedIn = false;
       }
-    });    
-
+    });  
     this._settingService.getConfiguracion().subscribe( configuracion => {
       this.permitirRegistro = configuracion.permitirRegistro;
-    })
-   
+    })   
   }
-
-  
-  logout(){
-    
-    this.isLoggedIn = false;
-    this.router.navigate(['/login']);
-  }
-
    }
