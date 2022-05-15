@@ -22,8 +22,8 @@ import { TableClientComponent } from './components/table-client/table-client.com
   ],
   imports: [
     CommonModule,
-    FormsModule,
     FlashMessagesModule.forRoot(),  
+    FormsModule,    
     RouterModule
   
   ],

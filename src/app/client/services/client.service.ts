@@ -46,15 +46,17 @@ export class ClientService {
     return this.client;
     }
 
+    updateClient(cliente: Client){
+      this.clientDoc = this.db.doc(`clientes/${cliente.id}`);
+      this.clientDoc.update(cliente);
+  }
+
     deleteClient(cliente: Client){
       this.clientDoc = this.db.doc(`clientes/${cliente.id}`);
       this.clientDoc.delete();
   }
 
-  updateClient(cliente: Client){
-      this.clientDoc = this.db.doc(`clientes/${cliente.id}`);
-      this.clientDoc.update(cliente);
-  }
+  
 
   
 
