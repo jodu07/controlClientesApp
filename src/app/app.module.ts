@@ -26,11 +26,10 @@ import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
     AngularFireModule.initializeApp(environment.firestore, 'control-clientes'),
     AngularFirestoreModule,
     AngularFireAuthModule,
-  FlashMessagesModule.forRoot(),
+    FlashMessagesModule.forRoot(),
     DashboardModule,
     SharedModule,
-    SignInModule
- 
+    SignInModule 
   ],
   providers: [
     { provide: SETTINGS, useValue:{}}
